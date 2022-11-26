@@ -289,6 +289,7 @@ body {
 .flexContainer .parent {
   display: none;
   position: relative;
+  bottom: 0;
   height: 100vh;
   width: 100%;
 }
@@ -407,6 +408,21 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .flexContainer {
+    overflow: hidden;
+  }
+  .flexContainer .nav .social {
+    display: none;
+  }
+  .flexContainer .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+  }
+  .flexContainer .nav .burger {
+    background-color: transparent;
+  }
   .flexContainer .grow-1, .flexContainer .grow-2, .flexContainer .grow-3, .flexContainer .grow-4, .flexContainer .grow-5 {
     display: none;
   }
@@ -416,7 +432,7 @@ body {
   .flexContainer .parent .slider, .flexContainer .parent .slider2, .flexContainer .parent .slider3, .flexContainer .parent .slider4, .flexContainer .parent .slider5 {
     display: block;
     height: 100vh;
-    width: 100%;
+    width: 100vh;
   }
   .flexContainer .parent .slider {
     background-image: url("../image/1.jpg.webp");
